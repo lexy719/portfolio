@@ -379,6 +379,49 @@ export const projects: Project[] = [
                     </ul>
                 </div>
 
+                <div className="border-t border-border pt-8">
+                    <h3 className="text-2xl font-bold text-foreground mb-4">The Hard Truth: No Clean Answer</h3>
+                    <p className="mb-4">
+                        Here's what most PMs won't say: <strong>the market currently rewards exploitation</strong>. Users who form emotional dependencies spend more. Loneliness drives engagement. Connection feels like a feature, even when it's harmful.
+                    </p>
+
+                    <div className="space-y-3 mb-6">
+                        <div className="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-200">
+                            <span className="text-red-600 font-bold text-sm mt-0.5">Path 1:</span>
+                            <div>
+                                <div className="font-medium text-red-800">Ignore safety</div>
+                                <div className="text-sm text-red-700">Win market share, harm users, wait for backlash or regulation</div>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                            <span className="text-amber-600 font-bold text-sm mt-0.5">Path 2:</span>
+                            <div>
+                                <div className="font-medium text-amber-800">Full safety mode</div>
+                                <div className="text-sm text-amber-700">Lose to competitors who don't care, product feels cold</div>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                            <span className="text-slate-600 font-bold text-sm mt-0.5">Path 3:</span>
+                            <div>
+                                <div className="font-medium text-slate-800">Middle ground</div>
+                                <div className="text-sm text-slate-600">Satisfies no one, still causes harm, just slower</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-violet-50 rounded-xl p-5 border border-violet-200">
+                        <h4 className="font-semibold text-violet-800 mb-2">What Might Shift the Equation</h4>
+                        <ul className="text-violet-700 text-sm space-y-1">
+                            <li>• Regulation forcing safety standards across the industry</li>
+                            <li>• Public backlash making "safe AI" a competitive advantage</li>
+                            <li>• Long-term brand trust outweighing short-term engagement</li>
+                        </ul>
+                        <p className="text-violet-800 text-sm mt-3 font-medium">
+                            Until then? Acknowledging the problem is step one. Most companies won't even do that.
+                        </p>
+                    </div>
+                </div>
+
                 <div className="space-y-4 pt-6 border-t border-border">
                     <h3 className="text-xl font-bold text-foreground">Why This Matters for PM Hiring</h3>
                     <ul className="space-y-3">
@@ -386,6 +429,7 @@ export const projects: Project[] = [
                         <li className="bullet-point">Demonstrates understanding of <strong>sensitive product decisions</strong></li>
                         <li className="bullet-point">Proves I can analyze <strong>real-world product failures</strong> and propose solutions</li>
                         <li className="bullet-point">Highlights <strong>ethical product thinking</strong> — increasingly important in AI</li>
+                        <li className="bullet-point">Shows I understand <strong>business tradeoffs</strong> — not just idealism</li>
                     </ul>
                 </div>
             </div>
