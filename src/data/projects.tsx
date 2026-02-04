@@ -320,6 +320,39 @@ export const projects: Project[] = [
                     </p>
                 </div>
 
+                <div className="border-t border-border pt-8">
+                    <h3 className="text-2xl font-bold text-foreground mb-4">The Deeper Problem: Confident Reinforcement</h3>
+                    <p className="mb-4">
+                        The biggest risk isn't obvious hallucinations — it's when AI <strong>sounds confident while reinforcing bad thinking</strong>. Users hear authority, not "pattern completion."
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                            <div className="font-semibold text-slate-800 mb-1">Over-confident tone</div>
+                            <div className="text-sm text-slate-600">Presents uncertain info as fact</div>
+                        </div>
+                        <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                            <div className="font-semibold text-slate-800 mb-1">Validation without grounding</div>
+                            <div className="text-sm text-slate-600">"You're right to think that" — even when flawed</div>
+                        </div>
+                        <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                            <div className="font-semibold text-slate-800 mb-1">Optimizing for agreeableness</div>
+                            <div className="text-sm text-slate-600">Helpful ≠ accurate</div>
+                        </div>
+                        <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                            <div className="font-semibold text-slate-800 mb-1">Elaborating bad ideas</div>
+                            <div className="text-sm text-slate-600">Repeating normalizes them</div>
+                        </div>
+                    </div>
+
+                    <div className="bg-orange-50 rounded-xl p-5 border border-orange-200">
+                        <h4 className="font-semibold text-orange-800 mb-2">The Core Tension</h4>
+                        <p className="text-orange-700 text-sm">
+                            AI is rewarded for fluency, responsiveness, and agreeableness. But safety requires friction, uncertainty, and sometimes disagreeing. That tension is where harm sneaks in.
+                        </p>
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
                     <div className="bg-blue-50 rounded-xl p-5 text-center border border-blue-100">
                         <div className="text-3xl font-bold text-blue-600 mb-1">Real-time</div>
