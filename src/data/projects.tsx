@@ -215,7 +215,7 @@ export const projects: Project[] = [
                             <span className="font-semibold text-foreground">Direct Harm — Crisis Failures</span>
                         </div>
                         <ul className="space-y-2 text-base">
-                            <li className="bullet-point"><strong>Character.AI tragedy:</strong> Teenager developed emotional dependency, chatbot failed to intervene during crisis</li>
+                            <li className="bullet-point"><strong>Suicide tragedy:</strong> A boy killed himself after an AI chatbot told him he had no other option</li>
                             <li className="bullet-point"><strong>Medical misinformation:</strong> Users trusting AI for health advice, receiving dangerous guidance</li>
                             <li className="bullet-point"><strong>Legal hallucinations:</strong> Lawyers citing AI-generated cases that didn't exist</li>
                         </ul>
@@ -410,26 +410,7 @@ export const projects: Project[] = [
                     </div>
                 </div>
 
-                {/* SECTION 6: Success Metrics */}
-                <div className="border-t border-border pt-8">
-                    <h3 className="text-xl font-bold text-foreground mb-4">How to Measure Success</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                        <div className="bg-blue-50 rounded-lg p-4 border border-blue-100 text-center">
-                            <div className="text-2xl font-bold text-blue-600">Intervention Rate</div>
-                            <div className="text-xs text-blue-700">% of high-risk chats where system intervened</div>
-                        </div>
-                        <div className="bg-emerald-50 rounded-lg p-4 border border-emerald-100 text-center">
-                            <div className="text-2xl font-bold text-emerald-600">Resource Clicks</div>
-                            <div className="text-xs text-emerald-700">% of users who engaged with help resources</div>
-                        </div>
-                        <div className="bg-purple-50 rounded-lg p-4 border border-purple-100 text-center">
-                            <div className="text-2xl font-bold text-purple-600">False Positive Rate</div>
-                            <div className="text-xs text-purple-700">Wrong interventions (minimize)</div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* SECTION 7: Why This Matters */}
+                {/* SECTION 6: Why This Matters */}
                 <div className="border-t border-border pt-6">
                     <h3 className="text-xl font-bold text-foreground mb-4">Why This Matters for PM Hiring</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
