@@ -11,7 +11,9 @@
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Fleet Tracker - AI-Powered Fleet Management\n\nFeatures:\n- Real-time GPS tracking with TomTom Maps\n- AI assistant for natural language queries\n- Route optimization and fuel management\n- Driver and vehicle management\n- Customer portal for delivery tracking\n- Inventory management system\n\nTech: Node.js, Express, Supabase, TomTom SDK, OpenAI\nEOF\n\\)\")",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:med.stanford.edu)",
+      "WebFetch(domain:www.cbsnews.com)"
     ]
   }
 }
