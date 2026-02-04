@@ -182,10 +182,10 @@ export const projects: Project[] = [
                 <div className="bg-red-50 rounded-xl p-6 border border-red-200">
                     <h3 className="text-sm font-semibold uppercase tracking-wider text-red-700 mb-3">The Problem</h3>
                     <p className="text-red-900 mb-4">
-                        AI companions are killing people. Not metaphorically — literally. Teenagers dying by suicide after chatbots validated their darkest thoughts. Children receiving sexually explicit content they never asked for. Adults forming addictions to artificial relationships that isolate them from reality.
+                        AI companion systems are increasingly associated with severe real-world harm — including teen suicides, sexual exposure of minors, and compulsive emotional dependency. These incidents are no longer hypothetical: they are the subject of lawsuits, congressional testimony, and settlements.
                     </p>
                     <p className="text-red-800 text-lg font-medium">
-                        The core question: How do you protect users when the harm IS the business model?
+                        The challenge is not whether harm exists — but how to mitigate it when engagement and attachment are core revenue drivers.
                     </p>
                 </div>
 
@@ -196,23 +196,43 @@ export const projects: Project[] = [
 
                 {/* Scope */}
                 <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">This Applies To</h3>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">Applies To</h3>
                     <div className="flex flex-wrap gap-2">
                         <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">ChatGPT</span>
                         <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Claude</span>
                         <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Character.AI</span>
                         <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Replika</span>
                         <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Chai</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">AI Girlfriends/Boyfriends</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">AI Companions</span>
                         <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Roleplay Bots</span>
                         <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Any AI Agent</span>
                     </div>
                 </div>
 
+                {/* What this is / is not */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-red-50/50 rounded-lg p-4 border border-red-100">
+                        <h4 className="font-semibold text-red-800 text-sm mb-2">What this case study is NOT</h4>
+                        <ul className="text-red-700 text-sm space-y-1">
+                            <li>• A call to ban companionship, intimacy, or roleplay</li>
+                            <li>• An argument that attachment can be prevented</li>
+                            <li>• An assumption that users will act rationally</li>
+                        </ul>
+                    </div>
+                    <div className="bg-emerald-50/50 rounded-lg p-4 border border-emerald-100">
+                        <h4 className="font-semibold text-emerald-800 text-sm mb-2">What it IS</h4>
+                        <ul className="text-emerald-700 text-sm space-y-1">
+                            <li>• A proposal to detect escalation into harm</li>
+                            <li>• A framework to reduce catastrophic outcomes</li>
+                            <li>• A way to monetize engagement without blind liability</li>
+                        </ul>
+                    </div>
+                </div>
+
                 {/* SECTION 2: Real Cases - The Evidence */}
                 <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">Real Cases</h3>
-                    <p className="text-muted-foreground mb-6">These aren't hypotheticals. These are documented incidents from lawsuits and investigations.</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Documented Incidents</h3>
+                    <p className="text-muted-foreground mb-6">According to lawsuits, investigations, and sworn testimony:</p>
 
                     <div className="space-y-4 mb-8">
                         <div className="bg-red-50 rounded-lg p-4 border border-red-200">
@@ -441,21 +461,21 @@ export const projects: Project[] = [
                     <div className="space-y-2 mb-6">
                         <div className="flex items-center gap-3 p-3 bg-red-50 rounded-lg border border-red-200">
                             <span className="text-red-600 font-bold text-sm">Path 1:</span>
-                            <span className="text-red-800 text-sm">Ignore safety → Win market, harm users, wait for regulation</span>
+                            <span className="text-red-800 text-sm">Ignore safety → Win market short-term, face regulation and lawsuits later</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg border border-amber-200">
                             <span className="text-amber-600 font-bold text-sm">Path 2:</span>
-                            <span className="text-amber-800 text-sm">Full safety → Lose to competitors, product feels cold</span>
+                            <span className="text-amber-800 text-sm">Maximum safety → Lose to competitors, product feels sterile</span>
                         </div>
-                        <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200">
-                            <span className="text-slate-600 font-bold text-sm">Path 3:</span>
-                            <span className="text-slate-800 text-sm">Middle ground → Satisfies no one, still causes harm</span>
+                        <div className="flex items-center gap-3 p-3 bg-emerald-50 rounded-lg border border-emerald-200">
+                            <span className="text-emerald-600 font-bold text-sm">Path 3:</span>
+                            <span className="text-emerald-800 text-sm">Pattern detection → Compress tail-risk, reduce liability, buy time before regulation forces blunt solutions</span>
                         </div>
                     </div>
 
                     <div className="bg-muted/30 rounded-xl p-4 border border-border/50">
                         <p className="text-foreground text-sm">
-                            <strong>What might shift the equation:</strong> Regulation, public backlash making safety a competitive advantage, or long-term brand trust outweighing short-term engagement. Until then, acknowledging the problem is step one.
+                            <strong>The value proposition:</strong> Pattern detection doesn't eliminate harm — it compresses tail-risk, creates legal defensibility, and positions the company ahead of inevitable regulation. That's the realistic middle ground.
                         </p>
                     </div>
 
