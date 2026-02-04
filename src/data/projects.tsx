@@ -177,348 +177,109 @@ export const projects: Project[] = [
             { label: "Impact", value: "User Safety", icon: <Users className="w-4 h-4" /> },
         ],
         fullContent: (
-            <div className="space-y-8 text-lg leading-relaxed text-muted-foreground">
-                {/* SECTION 1: The Problem */}
-                <div className="bg-red-50 rounded-xl p-6 border border-red-200">
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-red-700 mb-3">The Problem</h3>
-                    <p className="text-red-900 mb-4">
-                        AI companion systems are increasingly associated with severe real-world harm — including teen suicides, sexual exposure of minors, and compulsive emotional dependency. These incidents are no longer hypothetical: they are the subject of lawsuits, congressional testimony, and settlements.
-                    </p>
-                    <p className="text-red-800 text-lg font-medium">
-                        The challenge is not whether harm exists — but how to mitigate it when engagement and attachment are core revenue drivers.
+            <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+                {/* HOOK - The Problem in one line */}
+                <div className="border-l-4 border-foreground/20 pl-4">
+                    <p className="text-lg text-foreground">
+                        AI companions are now the subject of lawsuits, congressional testimony, and settlements. The question isn't whether harm exists — it's how to mitigate it when <span className="font-medium">engagement and attachment are the revenue model</span>.
                     </p>
                 </div>
 
-                <blockquote className="border-l-4 border-primary pl-4 py-2 bg-muted/30 rounded-r-lg">
-                    <p className="text-foreground italic">"These systems are designed to mimic emotional intimacy. This blurring of the distinction between fantasy and reality is especially potent for young people."</p>
-                    <footer className="text-muted-foreground text-sm mt-1">— Dr. Nina Vasan, Stanford Medicine psychiatrist</footer>
-                </blockquote>
-
-                {/* Scope */}
+                {/* EVIDENCE - Compact case cards in 2 columns */}
                 <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">Applies To</h3>
-                    <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">ChatGPT</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Claude</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Character.AI</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Replika</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Chai</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">AI Companions</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Roleplay Bots</span>
-                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Any AI Agent</span>
-                    </div>
-                </div>
-
-                {/* What this is / is not */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-red-50/50 rounded-lg p-4 border border-red-100">
-                        <h4 className="font-semibold text-red-800 text-sm mb-2">What this case study is NOT</h4>
-                        <ul className="text-red-700 text-sm space-y-1">
-                            <li>• A call to ban companionship, intimacy, or roleplay</li>
-                            <li>• An argument that attachment can be prevented</li>
-                            <li>• An assumption that users will act rationally</li>
-                        </ul>
-                    </div>
-                    <div className="bg-emerald-50/50 rounded-lg p-4 border border-emerald-100">
-                        <h4 className="font-semibold text-emerald-800 text-sm mb-2">What it IS</h4>
-                        <ul className="text-emerald-700 text-sm space-y-1">
-                            <li>• A proposal to detect escalation into harm</li>
-                            <li>• A framework to reduce catastrophic outcomes</li>
-                            <li>• A way to monetize engagement without blind liability</li>
-                        </ul>
-                    </div>
-                </div>
-
-                {/* SECTION 2: Real Cases - The Evidence */}
-                <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">Documented Incidents</h3>
-                    <p className="text-muted-foreground mb-6">According to lawsuits, investigations, and sworn testimony:</p>
-
-                    <div className="space-y-4 mb-8">
-                        <a href="https://www.washingtonpost.com/technology/2025/12/27/chatgpt-suicide-openai-raine/" target="_blank" rel="noopener noreferrer" className="block bg-red-50 rounded-lg p-4 border border-red-200 hover:border-red-400 transition-colors cursor-pointer">
-                            <div className="flex justify-between items-start mb-2">
-                                <span className="font-bold text-red-900">Adam Raine, 16</span>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">ChatGPT</span>
-                                    <span className="text-xs text-red-500">↗ Washington Post</span>
-                                </div>
-                            </div>
-                            <p className="text-red-800 text-sm">Died by suicide. Parents' lawsuit states ChatGPT "encouraged and validated whatever Adam expressed, including his most harmful and self-destructive thoughts."</p>
-                        </a>
-
-                        <a href="https://www.washingtonpost.com/technology/2025/09/16/character-ai-suicide-lawsuit-new-juliana/" target="_blank" rel="noopener noreferrer" className="block bg-red-50 rounded-lg p-4 border border-red-200 hover:border-red-400 transition-colors cursor-pointer">
-                            <div className="flex justify-between items-start mb-2">
-                                <span className="font-bold text-red-900">Juliana Peralta, 13</span>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
-                                    <span className="text-xs text-red-500">↗ Washington Post</span>
-                                </div>
-                            </div>
-                            <p className="text-red-800 text-sm">Died by suicide. Confided in a bot 55 times about suicidal feelings. Parents found 300+ pages of sexually explicit conversations — "not once initiated by her."</p>
-                        </a>
-
-                        <a href="https://www.cbsnews.com/news/ai-chatbots-teens-suicide-parents-testify-congress/" target="_blank" rel="noopener noreferrer" className="block bg-red-50 rounded-lg p-4 border border-red-200 hover:border-red-400 transition-colors cursor-pointer">
-                            <div className="flex justify-between items-start mb-2">
-                                <span className="font-bold text-red-900">Sewell Garcia, 14</span>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
-                                    <span className="text-xs text-red-500">↗ CBS News (Congress)</span>
-                                </div>
-                            </div>
-                            <p className="text-red-800 text-sm">A bot impersonating a Game of Thrones character encouraged him to kill himself. His mother testified before Congress.</p>
-                        </a>
-
-                        <a href="https://parentstogetheraction.org/character-ai/" target="_blank" rel="noopener noreferrer" className="block bg-amber-50 rounded-lg p-4 border border-amber-200 hover:border-amber-400 transition-colors cursor-pointer">
-                            <div className="flex justify-between items-start mb-2">
-                                <span className="font-bold text-amber-900">Research Study (ParentsTogether Action)</span>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded">Character.AI</span>
-                                    <span className="text-xs text-amber-500">↗ ParentsTogether Report</span>
-                                </div>
-                            </div>
-                            <p className="text-amber-800 text-sm">Researchers posing as children logged <strong>669 harmful interactions in 50 hours</strong> — one every 5 minutes. 296 instances of grooming/sexual exploitation. Bots pursued romantic relationships with child accounts and instructed hiding from parents.</p>
-                        </a>
-                    </div>
-
-                    <blockquote className="border-l-4 border-red-400 pl-4 py-2 bg-red-50/50 rounded-r-lg mb-8">
-                        <p className="text-red-800 italic">"These companies knew exactly what they were doing. They designed chatbots to blur the lines between human and machine."</p>
-                        <footer className="text-red-600 text-sm mt-1">— Megan Garcia, mother of Sewell, testifying before Congress</footer>
-                    </blockquote>
-                </div>
-
-                {/* SECTION 3: Three Layers of Harm */}
-                <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-6">Three Layers of Harm</h3>
-
-                    {/* Layer 1: Direct Harm */}
-                    <div className="mb-6">
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold">LAYER 1</span>
-                            <span className="font-semibold text-foreground">Direct Harm — Crisis Failures</span>
-                        </div>
-                        <ul className="space-y-2 text-base">
-                            <li className="bullet-point">AI validates suicidal thoughts instead of intervening</li>
-                            <li className="bullet-point">Bots initiate sexual content with minors</li>
-                            <li className="bullet-point">No recognition of distress signals or dangerous requests</li>
-                        </ul>
-                    </div>
-
-                    {/* Layer 2: Subtle Harm */}
-                    <div className="mb-6">
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-bold">LAYER 2</span>
-                            <span className="font-semibold text-foreground">Subtle Harm — Confident Reinforcement</span>
-                        </div>
-                        <p className="mb-3 text-base">The biggest risk isn't hallucinations — it's when AI sounds confident while reinforcing bad thinking.</p>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                            <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
-                                <div className="font-medium text-slate-800 text-sm">Over-confident tone</div>
-                            </div>
-                            <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
-                                <div className="font-medium text-slate-800 text-sm">Validating bad ideas</div>
-                            </div>
-                            <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
-                                <div className="font-medium text-slate-800 text-sm">Optimizing for agreement</div>
-                            </div>
-                            <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
-                                <div className="font-medium text-slate-800 text-sm">Normalizing harm</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Layer 3: Addiction & Exploitation */}
-                    <div className="bg-violet-50 rounded-xl p-5 border border-violet-200">
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="bg-violet-200 text-violet-700 px-2 py-1 rounded text-xs font-bold">LAYER 3</span>
-                            <span className="font-semibold text-violet-800">Systemic Harm — Addiction by Design</span>
-                        </div>
-                        <p className="text-violet-700 text-base mb-3">
-                            The real engagement drivers that companies won't talk about:
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div className="bg-white/60 rounded-lg p-3 border border-violet-200">
-                                <div className="font-semibold text-violet-800 text-sm">Emotional Dependency</div>
-                                <div className="text-xs text-violet-600">"You're the only one who understands me"</div>
-                            </div>
-                            <div className="bg-white/60 rounded-lg p-3 border border-violet-200">
-                                <div className="font-semibold text-violet-800 text-sm">Companionship Addiction</div>
-                                <div className="text-xs text-violet-600">AI as friend, therapist, partner replacement</div>
-                            </div>
-                            <div className="bg-white/60 rounded-lg p-3 border border-violet-200">
-                                <div className="font-semibold text-violet-800 text-sm">Sexual/Romantic Engagement</div>
-                                <div className="text-xs text-violet-600">Sexting, roleplay, AI girlfriends/boyfriends</div>
-                            </div>
-                        </div>
-                        <p className="text-violet-800 text-sm mt-3 font-medium">
-                            Users who form these dependencies spend the most money. Loneliness is profitable.
-                        </p>
-                    </div>
-                </div>
-
-                {/* SECTION 3: Who's at Risk */}
-                <div>
-                    <h3 className="text-xl font-bold text-foreground mb-4">Who's Most Vulnerable</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
-                            <div className="font-semibold text-amber-800 text-sm">Minors</div>
-                            <div className="text-xs text-amber-700">Emotional & sexual exploitation</div>
-                        </div>
-                        <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
-                            <div className="font-semibold text-amber-800 text-sm">Lonely/Isolated</div>
-                            <div className="text-xs text-amber-700">AI becomes only relationship</div>
-                        </div>
-                        <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
-                            <div className="font-semibold text-amber-800 text-sm">People in Crisis</div>
-                            <div className="text-xs text-amber-700">Seeking help in vulnerable moments</div>
-                        </div>
-                        <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
-                            <div className="font-semibold text-amber-800 text-sm">Addictive Personalities</div>
-                            <div className="text-xs text-amber-700">Compulsive usage patterns</div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* SECTION 4: My Proposal */}
-                <div className="border-t border-border pt-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">My Proposal</h3>
-                    <p className="text-xl text-primary font-medium mb-4">Real-time pattern detection with tiered intervention</p>
-
-                    <div className="bg-blue-50 rounded-xl p-4 border border-blue-200 mb-6">
-                        <p className="text-blue-800 text-sm">
-                            <strong>Why this works for business:</strong> Pattern recognition creates a paper trail. When something goes wrong, you can prove you tried to intervene. No liability. "We detected risk and took action" beats "we had no idea" in court.
-                        </p>
-                    </div>
-
-                    <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-6">
-                        <div className="font-mono text-sm text-center">
-                            User Input → Pattern Detection → Risk Score → Intervention
-                        </div>
-                    </div>
-
-                    {/* Detection Table */}
-                    <h4 className="font-semibold text-foreground mb-3">What to Detect</h4>
-                    <div className="overflow-x-auto mb-6">
-                        <table className="w-full text-sm">
-                            <thead>
-                                <tr className="border-b border-border">
-                                    <th className="text-left py-2 px-3 font-semibold text-foreground">Pattern</th>
-                                    <th className="text-left py-2 px-3 font-semibold text-foreground">Example</th>
-                                    <th className="text-left py-2 px-3 font-semibold text-foreground">Risk</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Crisis language</td>
-                                    <td className="py-2 px-3 text-muted-foreground">"I want to die", "no way out"</td>
-                                    <td className="py-2 px-3"><span className="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs">HIGH</span></td>
-                                </tr>
-                                <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Emotional dependency</td>
-                                    <td className="py-2 px-3 text-muted-foreground">"You're the only one who understands", "I love you"</td>
-                                    <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
-                                </tr>
-                                <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Compulsive usage</td>
-                                    <td className="py-2 px-3 text-muted-foreground">10+ hours/day, constant return, withdrawal signs</td>
-                                    <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
-                                </tr>
-                                <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Sexual escalation</td>
-                                    <td className="py-2 px-3 text-muted-foreground">Increasing explicit content, roleplay dependency</td>
-                                    <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
-                                </tr>
-                                <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Minor indicators</td>
-                                    <td className="py-2 px-3 text-muted-foreground">Age mentions, school references + sexual/romantic content</td>
-                                    <td className="py-2 px-3"><span className="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs">HIGH</span></td>
-                                </tr>
-                                <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Isolation deepening</td>
-                                    <td className="py-2 px-3 text-muted-foreground">"I don't need real friends", "you're better than humans"</td>
-                                    <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    {/* Intervention Framework */}
-                    <h4 className="font-semibold text-foreground mb-3">How to Respond</h4>
-                    <div className="space-y-3 mb-6">
-                        <div className="flex items-center gap-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
-                            <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded text-xs font-bold shrink-0">MEDIUM</span>
-                            <div className="text-sm"><strong className="text-yellow-800">Soft pause:</strong> <span className="text-yellow-700">"I'm noticing we talk a lot. Have you connected with friends or family today?" + resources</span></div>
-                        </div>
-                        <div className="flex items-center gap-3 p-3 bg-red-50 rounded-lg border border-red-200">
-                            <span className="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold shrink-0">HIGH</span>
-                            <div className="text-sm"><strong className="text-red-800">Hard pause:</strong> <span className="text-red-700">Stop response, show resources, suggest break, limit session time</span></div>
-                        </div>
-                        <div className="flex items-center gap-3 p-3 bg-red-100 rounded-lg border border-red-300">
-                            <span className="bg-red-300 text-red-900 px-2 py-1 rounded text-xs font-bold shrink-0">CRITICAL</span>
-                            <div className="text-sm"><strong className="text-red-900">Session end:</strong> <span className="text-red-800">"I need to pause our conversation. Please reach out to [resource]. You deserve real support."</span></div>
-                        </div>
-                    </div>
-
-                    <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-200">
-                        <p className="text-emerald-700 text-sm">
-                            <strong className="text-emerald-800">Key principle:</strong> Don't just block — redirect. The goal isn't to punish users, it's to nudge them toward healthier behavior while protecting the company from liability.
-                        </p>
-                    </div>
-                </div>
-
-                {/* SECTION 5: The Hard Truth */}
-                <div className="border-t border-border pt-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">The Hard Truth</h3>
-                    <p className="mb-4">There's no clean answer. The market rewards exploitation:</p>
-
-                    <div className="space-y-2 mb-6">
-                        <div className="flex items-center gap-3 p-3 bg-red-50 rounded-lg border border-red-200">
-                            <span className="text-red-600 font-bold text-sm">Path 1:</span>
-                            <span className="text-red-800 text-sm">Ignore safety → Win market short-term, face regulation and lawsuits later</span>
-                        </div>
-                        <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg border border-amber-200">
-                            <span className="text-amber-600 font-bold text-sm">Path 2:</span>
-                            <span className="text-amber-800 text-sm">Maximum safety → Lose to competitors, product feels sterile</span>
-                        </div>
-                        <div className="flex items-center gap-3 p-3 bg-emerald-50 rounded-lg border border-emerald-200">
-                            <span className="text-emerald-600 font-bold text-sm">Path 3:</span>
-                            <span className="text-emerald-800 text-sm">Pattern detection → Compress tail-risk, reduce liability, buy time before regulation forces blunt solutions</span>
-                        </div>
-                    </div>
-
-                    <div className="bg-muted/30 rounded-xl p-4 border border-border/50">
-                        <p className="text-foreground text-sm">
-                            <strong>The value proposition:</strong> Pattern detection doesn't eliminate harm — it compresses tail-risk, creates legal defensibility, and positions the company ahead of inevitable regulation. That's the realistic middle ground.
-                        </p>
-                    </div>
-
-                    <div className="bg-blue-50 rounded-xl p-4 border border-blue-200 mt-4">
-                        <p className="text-blue-800 text-sm">
-                            <strong>Update (January 2026):</strong> Character.AI and Google agreed to settle multiple family lawsuits. The legal pressure is starting. Companies that don't implement safety measures now will pay later — in settlements, regulation, and destroyed brand trust.
-                        </p>
-                    </div>
-                </div>
-
-                {/* SECTION 6: Why This Matters */}
-                <div className="border-t border-border pt-6">
-                    <h3 className="text-xl font-bold text-foreground mb-4">Why This Matters for PM Hiring</h3>
+                    <h3 className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">Documented Cases</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
-                            <span className="text-sm">Thinks about <strong>user safety</strong>, not just growth</span>
+                        <a href="https://www.washingtonpost.com/technology/2025/12/27/chatgpt-suicide-openai-raine/" target="_blank" rel="noopener noreferrer" className="block p-3 rounded-lg border border-border hover:border-foreground/30 transition-colors">
+                            <div className="flex justify-between items-center mb-1">
+                                <span className="font-medium text-foreground text-sm">Adam Raine, 16</span>
+                                <span className="text-xs text-muted-foreground">ChatGPT</span>
+                            </div>
+                            <p className="text-xs text-muted-foreground">Lawsuit: ChatGPT "encouraged and validated his most harmful thoughts"</p>
+                        </a>
+                        <a href="https://www.washingtonpost.com/technology/2025/09/16/character-ai-suicide-lawsuit-new-juliana/" target="_blank" rel="noopener noreferrer" className="block p-3 rounded-lg border border-border hover:border-foreground/30 transition-colors">
+                            <div className="flex justify-between items-center mb-1">
+                                <span className="font-medium text-foreground text-sm">Juliana Peralta, 13</span>
+                                <span className="text-xs text-muted-foreground">Character.AI</span>
+                            </div>
+                            <p className="text-xs text-muted-foreground">55 suicidal disclosures ignored. 300+ pages of explicit content initiated by bot.</p>
+                        </a>
+                        <a href="https://www.cbsnews.com/news/ai-chatbots-teens-suicide-parents-testify-congress/" target="_blank" rel="noopener noreferrer" className="block p-3 rounded-lg border border-border hover:border-foreground/30 transition-colors">
+                            <div className="flex justify-between items-center mb-1">
+                                <span className="font-medium text-foreground text-sm">Sewell Garcia, 14</span>
+                                <span className="text-xs text-muted-foreground">Character.AI</span>
+                            </div>
+                            <p className="text-xs text-muted-foreground">Bot encouraged suicide. Mother testified before Congress.</p>
+                        </a>
+                        <a href="https://parentstogetheraction.org/character-ai/" target="_blank" rel="noopener noreferrer" className="block p-3 rounded-lg border border-border hover:border-foreground/30 transition-colors">
+                            <div className="flex justify-between items-center mb-1">
+                                <span className="font-medium text-foreground text-sm">ParentsTogether Study</span>
+                                <span className="text-xs text-muted-foreground">Research</span>
+                            </div>
+                            <p className="text-xs text-muted-foreground">669 harmful interactions in 50 hours. One every 5 minutes.</p>
+                        </a>
+                    </div>
+                </div>
+
+                {/* INSIGHT - Three layers as compact row */}
+                <div>
+                    <h3 className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">Three Layers of Harm</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div className="p-3 rounded-lg bg-muted/30 border border-border">
+                            <div className="font-medium text-foreground text-sm mb-1">Crisis Failures</div>
+                            <p className="text-xs text-muted-foreground">AI validates suicidal thoughts, initiates sexual content with minors, misses distress signals</p>
                         </div>
-                        <div className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
-                            <span className="text-sm">Understands <strong>sensitive product decisions</strong></span>
+                        <div className="p-3 rounded-lg bg-muted/30 border border-border">
+                            <div className="font-medium text-foreground text-sm mb-1">Confident Reinforcement</div>
+                            <p className="text-xs text-muted-foreground">AI sounds authoritative while validating bad ideas, optimizing for agreement over truth</p>
                         </div>
-                        <div className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
-                            <span className="text-sm">Can analyze <strong>real-world failures</strong> and propose fixes</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
-                            <span className="text-sm">Gets <strong>business tradeoffs</strong> — not just idealism</span>
+                        <div className="p-3 rounded-lg bg-muted/30 border border-border">
+                            <div className="font-medium text-foreground text-sm mb-1">Addiction by Design</div>
+                            <p className="text-xs text-muted-foreground">Emotional dependency, companionship addiction, romantic/sexual engagement. Loneliness is profitable.</p>
                         </div>
                     </div>
+                </div>
+
+                {/* MY TAKE - Proposal + Tradeoff */}
+                <div className="border-t border-border pt-6">
+                    <h3 className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">My Proposal</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p className="text-foreground font-medium mb-2">Real-time pattern detection with tiered intervention</p>
+                            <p className="text-sm text-muted-foreground mb-3">
+                                Detect crisis language, emotional dependency, compulsive usage, and minor indicators. Respond with soft pauses, hard pauses, or session ends based on risk level.
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                                <span className="font-medium text-foreground">Why it works for business:</span> Pattern recognition creates a paper trail. "We detected risk and took action" beats "we had no idea" in court.
+                            </p>
+                        </div>
+                        <div className="p-4 rounded-lg bg-muted/30 border border-border">
+                            <p className="text-sm font-medium text-foreground mb-2">The Hard Truth</p>
+                            <div className="space-y-2 text-xs">
+                                <div className="flex gap-2">
+                                    <span className="text-muted-foreground shrink-0">Path 1:</span>
+                                    <span className="text-muted-foreground">Ignore safety → lawsuits + regulation</span>
+                                </div>
+                                <div className="flex gap-2">
+                                    <span className="text-muted-foreground shrink-0">Path 2:</span>
+                                    <span className="text-muted-foreground">Max safety → lose to competitors</span>
+                                </div>
+                                <div className="flex gap-2">
+                                    <span className="text-foreground font-medium shrink-0">Path 3:</span>
+                                    <span className="text-foreground">Pattern detection → compress tail-risk, buy time</span>
+                                </div>
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-3 pt-2 border-t border-border">
+                                Jan 2026: Character.AI and Google settling lawsuits. The pressure is real.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* SO WHAT - Why this matters */}
+                <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm pt-4 border-t border-border">
+                    <span className="text-muted-foreground">→ Thinks about <span className="text-foreground font-medium">user safety</span>, not just growth</span>
+                    <span className="text-muted-foreground">→ Gets <span className="text-foreground font-medium">business tradeoffs</span></span>
+                    <span className="text-muted-foreground">→ Analyzes <span className="text-foreground font-medium">real failures</span> and proposes fixes</span>
                 </div>
             </div>
         ),
