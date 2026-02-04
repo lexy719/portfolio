@@ -1,4 +1,4 @@
-import { Activity, Truck, TrendingUp, Users, Target, Clock, AlertTriangle, Shield } from "lucide-react";
+import { Activity, Truck, TrendingUp, Users, Target, Clock, AlertTriangle, Shield, Zap } from "lucide-react";
 import React from "react";
 
 export interface Project {
@@ -165,6 +165,77 @@ export const projects: Project[] = [
         tags: ["B2C", "SaaS", "0→1 Product", "User Research"],
         status: "BUILT",
         icon: <Activity className="w-6 h-6" />,
+    },
+    {
+        id: "priority-debater",
+        title: "Priority Debater",
+        subtitle: "AI-Powered Idea Stress-Testing Tool",
+        description: "Built a conversational AI tool that helps PMs and founders stress-test their ideas by finding gaps, challenging assumptions, and strengthening arguments through structured debate.",
+        demoUrl: "https://priority-debater.vercel.app/",
+        metrics: [
+            { label: "Type", value: "AI Tool", icon: <Zap className="w-4 h-4" /> },
+            { label: "Interface", value: "Chat", icon: <Users className="w-4 h-4" /> },
+            { label: "Focus", value: "PM Skills", icon: <Target className="w-4 h-4" /> },
+        ],
+        fullContent: (
+            <div className="space-y-8 text-lg leading-relaxed text-muted-foreground">
+                <div className="bg-muted/30 rounded-xl p-6 border border-border/50">
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">The Problem</h3>
+                    <p className="text-foreground">
+                        PMs and founders often get attached to their ideas. We need someone to poke holes, challenge assumptions, and find the gaps — but asking colleagues risks politics, and consultants are expensive. What if AI could be that brutally honest sparring partner?
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-foreground mb-4">My Role: Solo Builder</h3>
+                    <ul className="space-y-3">
+                        <li className="bullet-point">Identified the need from my own experience making product decisions in isolation</li>
+                        <li className="bullet-point">Designed the UX flow: simple setup → conversational debate → refined thinking</li>
+                        <li className="bullet-point">Engineered the AI prompt to be constructively critical without being hostile</li>
+                        <li className="bullet-point">Built mobile-first responsive design with modern UI patterns</li>
+                        <li className="bullet-point">Shipped end-to-end in one session — idea to deployed product</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-foreground mb-4">Key Product Decisions</h3>
+                    <ul className="space-y-3">
+                        <li className="bullet-point"><strong>Chat over forms:</strong> Real debates are conversations, not questionnaires. Back-and-forth builds better arguments.</li>
+                        <li className="bullet-point"><strong>Constructive critic persona:</strong> The AI finds gaps to strengthen your idea, not to win arguments. Helpful, not hostile.</li>
+                        <li className="bullet-point"><strong>Minimal setup:</strong> Just your idea + reasoning + optional context. Low friction to start thinking.</li>
+                        <li className="bullet-point"><strong>Mobile-first:</strong> Ideas happen anywhere. The tool should work on any device.</li>
+                    </ul>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
+                    <div className="bg-violet-50 rounded-xl p-5 text-center border border-violet-100">
+                        <div className="text-3xl font-bold text-violet-600 mb-1">GPT-4o</div>
+                        <div className="text-sm text-violet-700">Powered by OpenAI</div>
+                    </div>
+                    <div className="bg-purple-50 rounded-xl p-5 text-center border border-purple-100">
+                        <div className="text-3xl font-bold text-purple-600 mb-1">Chat</div>
+                        <div className="text-sm text-purple-700">Conversational UX</div>
+                    </div>
+                    <div className="bg-blue-50 rounded-xl p-5 text-center border border-blue-100">
+                        <div className="text-3xl font-bold text-blue-600 mb-1">1 Day</div>
+                        <div className="text-sm text-blue-700">Idea to Production</div>
+                    </div>
+                </div>
+
+                <div className="space-y-4 pt-6 border-t border-border">
+                    <h3 className="text-xl font-bold text-foreground">Key Learnings</h3>
+                    <ul className="space-y-3">
+                        <li className="bullet-point">AI prompt engineering is product design — the persona and constraints matter as much as the UI</li>
+                        <li className="bullet-point">Simple tools that do one thing well beat complex tools that do everything poorly</li>
+                        <li className="bullet-point">Shipping fast validates ideas faster than planning extensively</li>
+                        <li className="bullet-point">Building products yourself gives you empathy for what engineers deal with</li>
+                    </ul>
+                </div>
+            </div>
+        ),
+        tags: ["AI Tool", "Next.js", "OpenAI", "Solo Build"],
+        status: "BUILT",
+        icon: <Zap className="w-6 h-6" />,
     },
     {
         id: "ai-safety-teardown",
