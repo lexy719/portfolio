@@ -1,4 +1,4 @@
-import { Brain, Activity, Shield, Truck, TrendingUp, Users, Target, Clock, AlertTriangle } from "lucide-react";
+import { Activity, Truck, TrendingUp, Users, Target, Clock, AlertTriangle, Shield } from "lucide-react";
 import React from "react";
 
 export interface Project {
