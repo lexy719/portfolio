@@ -146,7 +146,7 @@ const ProjectPage = () => {
                             {/* Right: Metrics */}
                             {project.metrics && project.metrics.length > 0 && (
                                 <div className="grid grid-cols-3 gap-4">
-                                    {project.metrics.map((metric, index) => (
+                                    {project.metrics.map((metric) => (
                                         <div
                                             key={metric.label}
                                             className="bg-card rounded-xl p-5 border border-border/50 text-center"
