@@ -181,13 +181,13 @@ export const projects: Project[] = [
         id: "priority-debater",
         title: "Priority Debater",
         subtitle: "AI-Powered Idea Stress-Testing Tool",
-        description: "Built an AI debate tool featuring Dr. Alex Chen, a Stanford professor persona who uses PM frameworks (RICE, Jobs-to-be-Done, First Principles) to find the holes in your thinking before the market does.",
+        description: "AI debate tool with 4 perspective lenses (Investor, Customer, Competitor, Post-Mortem). Dr. Alex Chen stress-tests your ideas using PM frameworks, signature tests, and quick actions like steelman and summarize.",
         demoUrl: "https://priority-debater.vercel.app/",
         githubUrl: "https://github.com/lexy719/priority-debater",
         demoTips: [
-            { title: "Pick a Template", description: "Choose from Feature Priority, Strategic Decision, Product Idea, or Go-to-Market." },
-            { title: "Meet Dr. Chen", description: "Stanford GSB professor with 15 years at Google, Stripe, and Airbnb." },
-            { title: "Defend Your Position", description: "He'll use PM frameworks to find the holes before the market does." },
+            { title: "Pick a Lens", description: "Choose Investor, Customer, Competitor, or Post-Mortem perspective." },
+            { title: "Debate with Dr. Chen", description: "He'll challenge your thinking from your chosen perspective." },
+            { title: "Use Quick Actions", description: "Try 'Steelman this', 'Give me a framework', or 'Summarize debate'." },
         ],
         metrics: [
             { label: "Type", value: "AI Tool", icon: <Zap className="w-4 h-4" /> },
