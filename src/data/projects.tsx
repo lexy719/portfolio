@@ -12,10 +12,15 @@ export interface Project {
     icon: React.ReactNode;
     hasSlider?: boolean;
     demoUrl?: string;
+    githubUrl?: string;
     metrics?: {
         label: string;
         value: string;
         icon: React.ReactNode;
+    }[];
+    demoTips?: {
+        title: string;
+        description: string;
     }[];
 }
 
@@ -26,6 +31,12 @@ export const projects: Project[] = [
         subtitle: "AI-Powered Fleet Management Platform",
         description: "Built a full-stack B2B SaaS platform that consolidates 5-7 separate fleet management tools into one solution, featuring AI-powered natural language queries and real-time GPS tracking.",
         demoUrl: "https://fleet-tracker-dusky.vercel.app/",
+        githubUrl: "https://github.com/lexy719/fleet-tracker",
+        demoTips: [
+            { title: "Try the AI Assistant", description: "Ask questions like \"Show all trucks\" or \"Which drivers are available?\"" },
+            { title: "Explore the Map", description: "View real-time GPS positions and route visualizations on the dashboard." },
+            { title: "Navigate Sections", description: "Check out Routes, Drivers, Inventory, and Customer management." },
+        ],
         metrics: [
             { label: "Tools Consolidated", value: "5-7", icon: <Target className="w-4 h-4" /> },
             { label: "Potential Savings", value: "60-75%", icon: <TrendingUp className="w-4 h-4" /> },
@@ -172,6 +183,12 @@ export const projects: Project[] = [
         subtitle: "AI-Powered Idea Stress-Testing Tool",
         description: "Built a conversational AI tool that helps PMs and founders stress-test their ideas by finding gaps, challenging assumptions, and strengthening arguments through structured debate.",
         demoUrl: "https://priority-debater.vercel.app/",
+        githubUrl: "https://github.com/lexy719/priority-debater",
+        demoTips: [
+            { title: "Enter Your Idea", description: "Describe your decision or proposal and the reasoning behind it." },
+            { title: "Start the Debate", description: "AI will challenge your assumptions and find gaps in your thinking." },
+            { title: "Defend & Refine", description: "Respond to critiques to strengthen your argument through dialogue." },
+        ],
         metrics: [
             { label: "Type", value: "AI Tool", icon: <Zap className="w-4 h-4" /> },
             { label: "Interface", value: "Chat", icon: <Users className="w-4 h-4" /> },

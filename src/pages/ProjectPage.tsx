@@ -119,26 +119,30 @@ const ProjectPage = () => {
                                 </div>
 
                                 {/* Action Buttons */}
-                                {hasDemo && (
+                                {(hasDemo || project.githubUrl) && (
                                     <div className="flex flex-wrap gap-3 pt-2">
-                                        <a
-                                            href={project.demoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-all"
-                                        >
-                                            <ExternalLink className="w-4 h-4" />
-                                            Open Live Demo
-                                        </a>
-                                        <a
-                                            href="https://github.com/lexy719/fleet-tracker"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-muted text-foreground font-semibold rounded-lg hover:bg-muted/80 transition-all border border-border/50"
-                                        >
-                                            <Github className="w-4 h-4" />
-                                            View Source
-                                        </a>
+                                        {hasDemo && (
+                                            <a
+                                                href={project.demoUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-all"
+                                            >
+                                                <ExternalLink className="w-4 h-4" />
+                                                Open Live Demo
+                                            </a>
+                                        )}
+                                        {project.githubUrl && (
+                                            <a
+                                                href={project.githubUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-muted text-foreground font-semibold rounded-lg hover:bg-muted/80 transition-all border border-border/50"
+                                            >
+                                                <Github className="w-4 h-4" />
+                                                View Source
+                                            </a>
+                                        )}
                                     </div>
                                 )}
                             </div>
@@ -209,7 +213,7 @@ const ProjectPage = () => {
                                             </div>
                                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                                 <Monitor className="w-4 h-4" />
-                                                <span className="font-medium">Fleet Tracker</span>
+                                                <span className="font-medium">{project.title}</span>
                                                 <span className="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 font-medium">LIVE</span>
                                             </div>
                                         </div>
@@ -252,20 +256,16 @@ const ProjectPage = () => {
                                 )}
 
                                 {/* Demo Tips */}
-                                <div className="grid md:grid-cols-3 gap-4 pt-4">
-                                    <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
-                                        <h3 className="font-semibold text-foreground mb-1 text-sm">Try the AI Assistant</h3>
-                                        <p className="text-xs text-muted-foreground">Ask questions like "Show all trucks" or "Which drivers are available?"</p>
+                                {project.demoTips && project.demoTips.length > 0 && (
+                                    <div className="grid md:grid-cols-3 gap-4 pt-4">
+                                        {project.demoTips.map((tip, index) => (
+                                            <div key={index} className="p-4 rounded-lg bg-muted/30 border border-border/50">
+                                                <h3 className="font-semibold text-foreground mb-1 text-sm">{tip.title}</h3>
+                                                <p className="text-xs text-muted-foreground">{tip.description}</p>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
-                                        <h3 className="font-semibold text-foreground mb-1 text-sm">Explore the Map</h3>
-                                        <p className="text-xs text-muted-foreground">View real-time GPS positions and route visualizations on the dashboard.</p>
-                                    </div>
-                                    <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
-                                        <h3 className="font-semibold text-foreground mb-1 text-sm">Navigate Sections</h3>
-                                        <p className="text-xs text-muted-foreground">Check out Routes, Drivers, Inventory, and Customer management.</p>
-                                    </div>
-                                </div>
+                                )}
                             </div>
                         </div>
                     </section>
