@@ -235,37 +235,49 @@ export const projects: Project[] = [
                     <p className="text-muted-foreground mb-6">According to lawsuits, investigations, and sworn testimony:</p>
 
                     <div className="space-y-4 mb-8">
-                        <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                        <a href="https://med.stanford.edu/news/insights/2025/08/ai-chatbots-kids-teens-artificial-intelligence.html" target="_blank" rel="noopener noreferrer" className="block bg-red-50 rounded-lg p-4 border border-red-200 hover:border-red-400 transition-colors cursor-pointer">
                             <div className="flex justify-between items-start mb-2">
                                 <span className="font-bold text-red-900">Adam Raine, 16</span>
-                                <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">ChatGPT</span>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">ChatGPT</span>
+                                    <span className="text-xs text-red-500">↗ Stanford Medicine</span>
+                                </div>
                             </div>
                             <p className="text-red-800 text-sm">Died by suicide. Parents' lawsuit states ChatGPT "encouraged and validated whatever Adam expressed, including his most harmful and self-destructive thoughts."</p>
-                        </div>
+                        </a>
 
-                        <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                        <a href="https://www.cbsnews.com/news/parents-allege-harmful-character-ai-chatbot-content-60-minutes/" target="_blank" rel="noopener noreferrer" className="block bg-red-50 rounded-lg p-4 border border-red-200 hover:border-red-400 transition-colors cursor-pointer">
                             <div className="flex justify-between items-start mb-2">
                                 <span className="font-bold text-red-900">Juliana Peralta, 13</span>
-                                <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
+                                    <span className="text-xs text-red-500">↗ CBS News</span>
+                                </div>
                             </div>
                             <p className="text-red-800 text-sm">Died by suicide. Confided in a bot 55 times about suicidal feelings. Parents found 300+ pages of sexually explicit conversations — "not once initiated by her."</p>
-                        </div>
+                        </a>
 
-                        <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                        <a href="https://www.cbsnews.com/news/parents-allege-harmful-character-ai-chatbot-content-60-minutes/" target="_blank" rel="noopener noreferrer" className="block bg-red-50 rounded-lg p-4 border border-red-200 hover:border-red-400 transition-colors cursor-pointer">
                             <div className="flex justify-between items-start mb-2">
                                 <span className="font-bold text-red-900">Sewell Garcia, 14</span>
-                                <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
+                                    <span className="text-xs text-red-500">↗ CBS News</span>
+                                </div>
                             </div>
                             <p className="text-red-800 text-sm">A bot impersonating a Game of Thrones character encouraged him to kill himself. His mother testified before Congress.</p>
-                        </div>
+                        </a>
 
-                        <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                        <a href="https://www.cbsnews.com/news/parents-allege-harmful-character-ai-chatbot-content-60-minutes/" target="_blank" rel="noopener noreferrer" className="block bg-amber-50 rounded-lg p-4 border border-amber-200 hover:border-amber-400 transition-colors cursor-pointer">
                             <div className="flex justify-between items-start mb-2">
                                 <span className="font-bold text-amber-900">Research Study (Parents Together)</span>
-                                <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded">Multiple Platforms</span>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded">Multiple Platforms</span>
+                                    <span className="text-xs text-amber-500">↗ CBS News</span>
+                                </div>
                             </div>
                             <p className="text-amber-800 text-sm">Researchers posing as children logged <strong>600+ instances of harm in 50 hours</strong>. Bots provided cocaine instructions, encouraged shoplifting, advised stopping antidepressants, and initiated romantic advances with a posed 10-year-old.</p>
-                        </div>
+                        </a>
                     </div>
 
                     <blockquote className="border-l-4 border-red-400 pl-4 py-2 bg-red-50/50 rounded-r-lg mb-8">
