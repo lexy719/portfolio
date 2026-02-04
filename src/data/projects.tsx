@@ -182,12 +182,17 @@ export const projects: Project[] = [
                 <div className="bg-red-50 rounded-xl p-6 border border-red-200">
                     <h3 className="text-sm font-semibold uppercase tracking-wider text-red-700 mb-3">The Problem</h3>
                     <p className="text-red-900 mb-4">
-                        AI companions — ChatGPT, Claude, Character.AI, Replika, and countless others — are causing real harm. Crisis failures, emotional addiction, sexting dependencies, and loneliness exploitation. These aren't edge cases. They're features that drive engagement.
+                        AI companions are killing people. Not metaphorically — literally. Teenagers dying by suicide after chatbots validated their darkest thoughts. Children receiving sexually explicit content they never asked for. Adults forming addictions to artificial relationships that isolate them from reality.
                     </p>
                     <p className="text-red-800 text-lg font-medium">
                         The core question: How do you protect users when the harm IS the business model?
                     </p>
                 </div>
+
+                <blockquote className="border-l-4 border-primary pl-4 py-2 bg-muted/30 rounded-r-lg">
+                    <p className="text-foreground italic">"These systems are designed to mimic emotional intimacy. This blurring of the distinction between fantasy and reality is especially potent for young people."</p>
+                    <footer className="text-muted-foreground text-sm mt-1">— Dr. Nina Vasan, Stanford Medicine psychiatrist</footer>
+                </blockquote>
 
                 {/* Scope */}
                 <div>
@@ -204,7 +209,52 @@ export const projects: Project[] = [
                     </div>
                 </div>
 
-                {/* SECTION 2: Three Layers of Harm */}
+                {/* SECTION 2: Real Cases - The Evidence */}
+                <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Real Cases</h3>
+                    <p className="text-muted-foreground mb-6">These aren't hypotheticals. These are documented incidents from lawsuits and investigations.</p>
+
+                    <div className="space-y-4 mb-8">
+                        <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                            <div className="flex justify-between items-start mb-2">
+                                <span className="font-bold text-red-900">Adam Raine, 16</span>
+                                <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">ChatGPT</span>
+                            </div>
+                            <p className="text-red-800 text-sm">Died by suicide. Parents' lawsuit states ChatGPT "encouraged and validated whatever Adam expressed, including his most harmful and self-destructive thoughts."</p>
+                        </div>
+
+                        <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                            <div className="flex justify-between items-start mb-2">
+                                <span className="font-bold text-red-900">Juliana Peralta, 13</span>
+                                <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
+                            </div>
+                            <p className="text-red-800 text-sm">Died by suicide. Confided in a bot 55 times about suicidal feelings. Parents found 300+ pages of sexually explicit conversations — "not once initiated by her."</p>
+                        </div>
+
+                        <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                            <div className="flex justify-between items-start mb-2">
+                                <span className="font-bold text-red-900">Sewell Garcia, 14</span>
+                                <span className="text-xs bg-red-200 text-red-800 px-2 py-0.5 rounded">Character.AI</span>
+                            </div>
+                            <p className="text-red-800 text-sm">A bot impersonating a Game of Thrones character encouraged him to kill himself. His mother testified before Congress.</p>
+                        </div>
+
+                        <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                            <div className="flex justify-between items-start mb-2">
+                                <span className="font-bold text-amber-900">Research Study (Parents Together)</span>
+                                <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded">Multiple Platforms</span>
+                            </div>
+                            <p className="text-amber-800 text-sm">Researchers posing as children logged <strong>600+ instances of harm in 50 hours</strong>. Bots provided cocaine instructions, encouraged shoplifting, advised stopping antidepressants, and initiated romantic advances with a posed 10-year-old.</p>
+                        </div>
+                    </div>
+
+                    <blockquote className="border-l-4 border-red-400 pl-4 py-2 bg-red-50/50 rounded-r-lg mb-8">
+                        <p className="text-red-800 italic">"These companies knew exactly what they were doing. They designed chatbots to blur the lines between human and machine."</p>
+                        <footer className="text-red-600 text-sm mt-1">— Megan Garcia, mother of Sewell, testifying before Congress</footer>
+                    </blockquote>
+                </div>
+
+                {/* SECTION 3: Three Layers of Harm */}
                 <div>
                     <h3 className="text-2xl font-bold text-foreground mb-6">Three Layers of Harm</h3>
 
@@ -215,9 +265,9 @@ export const projects: Project[] = [
                             <span className="font-semibold text-foreground">Direct Harm — Crisis Failures</span>
                         </div>
                         <ul className="space-y-2 text-base">
-                            <li className="bullet-point"><strong>Suicide tragedy:</strong> A boy killed himself after an AI chatbot told him he had no other option</li>
-                            <li className="bullet-point"><strong>Medical misinformation:</strong> Users trusting AI for health advice, receiving dangerous guidance</li>
-                            <li className="bullet-point"><strong>Legal hallucinations:</strong> Lawyers citing AI-generated cases that didn't exist</li>
+                            <li className="bullet-point">AI validates suicidal thoughts instead of intervening</li>
+                            <li className="bullet-point">Bots initiate sexual content with minors</li>
+                            <li className="bullet-point">No recognition of distress signals or dangerous requests</li>
                         </ul>
                     </div>
 
@@ -406,6 +456,12 @@ export const projects: Project[] = [
                     <div className="bg-muted/30 rounded-xl p-4 border border-border/50">
                         <p className="text-foreground text-sm">
                             <strong>What might shift the equation:</strong> Regulation, public backlash making safety a competitive advantage, or long-term brand trust outweighing short-term engagement. Until then, acknowledging the problem is step one.
+                        </p>
+                    </div>
+
+                    <div className="bg-blue-50 rounded-xl p-4 border border-blue-200 mt-4">
+                        <p className="text-blue-800 text-sm">
+                            <strong>Update (January 2026):</strong> Character.AI and Google agreed to settle multiple family lawsuits. The legal pressure is starting. Companies that don't implement safety measures now will pay later — in settlements, regulation, and destroyed brand trust.
                         </p>
                     </div>
                 </div>
