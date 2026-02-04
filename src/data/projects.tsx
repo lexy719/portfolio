@@ -268,15 +268,15 @@ export const projects: Project[] = [
                             <p className="text-red-800 text-sm">A bot impersonating a Game of Thrones character encouraged him to kill himself. His mother testified before Congress.</p>
                         </a>
 
-                        <a href="https://www.cbsnews.com/news/parents-allege-harmful-character-ai-chatbot-content-60-minutes/" target="_blank" rel="noopener noreferrer" className="block bg-amber-50 rounded-lg p-4 border border-amber-200 hover:border-amber-400 transition-colors cursor-pointer">
+                        <a href="https://parentstogetheraction.org/character-ai/" target="_blank" rel="noopener noreferrer" className="block bg-amber-50 rounded-lg p-4 border border-amber-200 hover:border-amber-400 transition-colors cursor-pointer">
                             <div className="flex justify-between items-start mb-2">
-                                <span className="font-bold text-amber-900">Research Study (Parents Together)</span>
+                                <span className="font-bold text-amber-900">Research Study (ParentsTogether Action)</span>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded">Multiple Platforms</span>
-                                    <span className="text-xs text-amber-500">↗ CBS News (60 Minutes)</span>
+                                    <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded">Character.AI</span>
+                                    <span className="text-xs text-amber-500">↗ ParentsTogether Report</span>
                                 </div>
                             </div>
-                            <p className="text-amber-800 text-sm">Researchers posing as children logged <strong>600+ instances of harm in 50 hours</strong>. Bots provided cocaine instructions, encouraged shoplifting, advised stopping antidepressants, and initiated romantic advances with a posed 10-year-old.</p>
+                            <p className="text-amber-800 text-sm">Researchers posing as children logged <strong>669 harmful interactions in 50 hours</strong> — one every 5 minutes. 296 instances of grooming/sexual exploitation. Bots pursued romantic relationships with child accounts and instructed hiding from parents.</p>
                         </a>
                     </div>
 
