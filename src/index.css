@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clean, professional palette */
+    --background: 0 0% 99%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Professional blue-slate */
+    --primary: 222 47% 20%;
+    --primary-foreground: 0 0% 99%;
+
+    /* Subtle gray */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 20%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Professional blue accent */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+
+    --shadow-subtle: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --shadow-card: 0 4px 12px -2px hsl(222 47% 11% / 0.08);
+
+    --spacing-section: 2rem;
+    --border-subtle: 1px solid hsl(var(--border));
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 222 47% 8%;
+
+    --secondary: 222 30% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 222 30% 15%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02";
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground mb-4;
+    font-family: var(--font-body);
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.animate-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .experience-title {
+    @apply text-lg font-semibold text-foreground;
+    font-family: var(--font-display);
+  }
+
+  .skill-tag {
+    @apply inline-flex items-center px-3 py-1.5 text-xs font-medium bg-secondary text-secondary-foreground rounded-full;
+  }
+
+  .skill-tag-accent {
+    @apply inline-flex items-center px-3 py-1.5 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20;
+  }
+
+  .contact-link {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-muted-foreground bg-secondary/50 rounded-full;
+  }
+
+  .project-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-card hover:border-accent/30 animate-fade-in cursor-pointer;
+  }
+
+  .bullet-point {
+    @apply relative pl-5 text-muted-foreground leading-relaxed;
+  }
+
+  .bullet-point::before {
+    content: '';
+    @apply absolute left-0 top-[0.6em] w-1.5 h-1.5 rounded-full bg-accent/60;
+  }
+}
+
+@layer utilities {
+  .print-only {
+    @apply hidden print:block;
+  }
+
+  .screen-only {
+    @apply print:hidden;
+  }
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.3);
+}
+
+@media print {
+  @page {
+    margin: 0.5in;
+    size: A4;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
