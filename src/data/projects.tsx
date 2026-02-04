@@ -234,24 +234,9 @@ export const projects: Project[] = [
                         </div>
                     </div>
 
-                    {/* Evidence - Smaller, supporting role */}
-                    <div className="p-3 rounded-lg border border-border">
-                        <div className="flex items-center justify-between mb-2">
-                            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Recent Legal Precedent</span>
-                        </div>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-                            <a href="https://www.washingtonpost.com/technology/2025/12/27/chatgpt-suicide-openai-raine/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                                OpenAI lawsuit (2025) ↗
-                            </a>
-                            <a href="https://www.cbsnews.com/news/ai-chatbots-teens-suicide-parents-testify-congress/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                                Congressional testimony ↗
-                            </a>
-                            <a href="https://parentstogetheraction.org/character-ai/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                                ParentsTogether study ↗
-                            </a>
-                            <span className="text-muted-foreground">Character.AI settlements (Jan 2026)</span>
-                        </div>
-                    </div>
+                    <p className="text-xs text-muted-foreground">
+                        This isn't theoretical — see <a href="https://www.washingtonpost.com/technology/2025/12/27/chatgpt-suicide-openai-raine/" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">OpenAI lawsuit</a>, <a href="https://www.cbsnews.com/news/ai-chatbots-teens-suicide-parents-testify-congress/" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">congressional testimony</a>, <a href="https://parentstogetheraction.org/character-ai/" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">ParentsTogether study</a>, and Character.AI settlements (Jan 2026).
+                    </p>
                 </div>
 
                 {/* TRADEOFFS - Shows business thinking */}
