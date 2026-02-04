@@ -31,6 +31,8 @@ const ProjectCard = ({ icon, title, subtitle, description, tags, status, metrics
                 return "bg-amber-100 text-amber-700 border-amber-200";
             case "CONCEPT":
                 return "bg-slate-100 text-slate-600 border-slate-200";
+            case "CASE STUDY":
+                return "bg-purple-100 text-purple-700 border-purple-200";
             default:
                 return "bg-primary/10 text-primary border-primary/20";
         }
@@ -88,8 +90,8 @@ const ProjectCard = ({ icon, title, subtitle, description, tags, status, metrics
                     {description}
                 </p>
 
-                {/* Metrics Row - Show for BUILT and SHIPPED products */}
-                {metrics && metrics.length > 0 && (status === "SHIPPED" || status === "BUILT") && (
+                {/* Metrics Row - Show for BUILT, SHIPPED, and CASE STUDY */}
+                {metrics && metrics.length > 0 && (status === "SHIPPED" || status === "BUILT" || status === "CASE STUDY") && (
                     <div className="flex flex-wrap gap-3 mb-5">
                         {metrics.map((metric) => (
                             <div

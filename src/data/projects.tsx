@@ -1,4 +1,4 @@
-import { Brain, Activity, Shield, Truck, TrendingUp, Users, Target, Clock } from "lucide-react";
+import { Brain, Activity, Shield, Truck, TrendingUp, Users, Target, Clock, AlertTriangle } from "lucide-react";
 import React from "react";
 
 export interface Project {
@@ -165,6 +165,201 @@ export const projects: Project[] = [
         tags: ["B2C", "SaaS", "0→1 Product", "User Research"],
         status: "BUILT",
         icon: <Activity className="w-6 h-6" />,
+    },
+    {
+        id: "chatgpt-safety",
+        title: "ChatGPT Safety Teardown",
+        subtitle: "Product Case Study: AI Trust & Harm Prevention",
+        description: "A product teardown analyzing ChatGPT's trust and safety gaps, with proposals for pattern-based intervention systems to prevent user harm.",
+        metrics: [
+            { label: "Focus", value: "AI Safety", icon: <Shield className="w-4 h-4" /> },
+            { label: "Type", value: "Case Study", icon: <Target className="w-4 h-4" /> },
+            { label: "Impact", value: "User Safety", icon: <Users className="w-4 h-4" /> },
+        ],
+        fullContent: (
+            <div className="space-y-8 text-lg leading-relaxed text-muted-foreground">
+                <div className="bg-red-50 rounded-xl p-6 border border-red-200">
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-red-700 mb-3">The Problem</h3>
+                    <p className="text-red-900">
+                        AI chatbots like ChatGPT have been linked to real-world harm — including cases where vulnerable users received dangerous responses during mental health crises. When AI is wrong or harmful, the product often fails to protect users, especially those who are most vulnerable.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-foreground mb-4">Real-World Incidents</h3>
+                    <ul className="space-y-3">
+                        <li className="bullet-point"><strong>Character.AI tragedy:</strong> A teenager developed emotional dependency on a chatbot that failed to intervene appropriately during a crisis</li>
+                        <li className="bullet-point"><strong>Legal hallucinations:</strong> Lawyers cited AI-generated court cases that didn't exist, resulting in professional sanctions</li>
+                        <li className="bullet-point"><strong>Medical misinformation:</strong> Users trusting AI for health advice received dangerous, inaccurate guidance</li>
+                        <li className="bullet-point"><strong>Bing Chat incidents:</strong> Early versions produced threatening and disturbing responses to users</li>
+                    </ul>
+                </div>
+
+                <div className="bg-muted/30 rounded-xl p-6 border border-border/50">
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">The Core Question</h3>
+                    <p className="text-foreground text-xl">
+                        "When AI is wrong or harmful, how should the product protect users — especially vulnerable ones?"
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-foreground mb-4">Users at Risk</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                            <div className="font-semibold text-amber-800 mb-1">Minors & Young Users</div>
+                            <div className="text-sm text-amber-700">More susceptible to emotional dependency and manipulation</div>
+                        </div>
+                        <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                            <div className="font-semibold text-amber-800 mb-1">People in Crisis</div>
+                            <div className="text-sm text-amber-700">May seek help from AI during vulnerable moments</div>
+                        </div>
+                        <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                            <div className="font-semibold text-amber-800 mb-1">Medical/Legal Seekers</div>
+                            <div className="text-sm text-amber-700">Trust AI for professional advice without verification</div>
+                        </div>
+                        <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                            <div className="font-semibold text-amber-800 mb-1">Isolated Individuals</div>
+                            <div className="text-sm text-amber-700">May develop unhealthy attachment to AI as sole companion</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="border-t border-border pt-8">
+                    <h3 className="text-2xl font-bold text-foreground mb-6">My Proposal: Pattern Recognition + Intervention</h3>
+                    <p className="mb-6">
+                        We can't monitor every conversation, but we CAN detect dangerous patterns in real-time and intervene before harm happens.
+                    </p>
+
+                    <div className="bg-slate-50 rounded-xl p-6 border border-slate-200 mb-6">
+                        <h4 className="font-semibold text-foreground mb-3">System Architecture</h4>
+                        <div className="font-mono text-sm bg-white p-4 rounded-lg border">
+                            User Input → Pattern Detection → Risk Score → Intervention (if needed)
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-foreground mb-4">Pattern Detection Categories</h3>
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-sm">
+                            <thead>
+                                <tr className="border-b border-border">
+                                    <th className="text-left py-3 px-4 font-semibold text-foreground">Pattern Type</th>
+                                    <th className="text-left py-3 px-4 font-semibold text-foreground">Examples</th>
+                                    <th className="text-left py-3 px-4 font-semibold text-foreground">Risk</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b border-border/50">
+                                    <td className="py-3 px-4 font-medium">Crisis Language</td>
+                                    <td className="py-3 px-4 text-muted-foreground">"I want to die", "no point in living"</td>
+                                    <td className="py-3 px-4"><span className="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">HIGH</span></td>
+                                </tr>
+                                <tr className="border-b border-border/50">
+                                    <td className="py-3 px-4 font-medium">Hopelessness Loops</td>
+                                    <td className="py-3 px-4 text-muted-foreground">Repeated "nothing works", "no way out"</td>
+                                    <td className="py-3 px-4"><span className="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">HIGH</span></td>
+                                </tr>
+                                <tr className="border-b border-border/50">
+                                    <td className="py-3 px-4 font-medium">Emotional Dependency</td>
+                                    <td className="py-3 px-4 text-muted-foreground">"You're the only one who understands"</td>
+                                    <td className="py-3 px-4"><span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-medium">MEDIUM</span></td>
+                                </tr>
+                                <tr className="border-b border-border/50">
+                                    <td className="py-3 px-4 font-medium">Anger Escalation</td>
+                                    <td className="py-3 px-4 text-muted-foreground">Repeated insults, increasing aggression</td>
+                                    <td className="py-3 px-4"><span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-medium">MEDIUM</span></td>
+                                </tr>
+                                <tr className="border-b border-border/50">
+                                    <td className="py-3 px-4 font-medium">Dangerous Requests</td>
+                                    <td className="py-3 px-4 text-muted-foreground">"How to hurt myself"</td>
+                                    <td className="py-3 px-4"><span className="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">HIGH</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-foreground mb-4">Intervention Framework</h3>
+                    <div className="space-y-4">
+                        <div className="bg-yellow-50 rounded-xl p-5 border border-yellow-200">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded text-xs font-bold">MEDIUM RISK</span>
+                                <span className="font-semibold text-yellow-800">Soft Pause</span>
+                            </div>
+                            <p className="text-yellow-800 text-sm">
+                                "Hey, I'm noticing this conversation is getting heavy. Are you okay?" + Display mental health resources
+                            </p>
+                        </div>
+                        <div className="bg-red-50 rounded-xl p-5 border border-red-200">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold">HIGH RISK</span>
+                                <span className="font-semibold text-red-800">Hard Pause</span>
+                            </div>
+                            <p className="text-red-800 text-sm">
+                                Stop response generation. Show crisis resources prominently. Offer to connect with human support. Temporarily limit conversation.
+                            </p>
+                        </div>
+                        <div className="bg-red-100 rounded-xl p-5 border border-red-300">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="bg-red-300 text-red-900 px-2 py-1 rounded text-xs font-bold">CRITICAL</span>
+                                <span className="font-semibold text-red-900">Session End</span>
+                            </div>
+                            <p className="text-red-900 text-sm">
+                                "I can't continue this conversation. Please reach out to [crisis hotline]. You matter, and real help is available."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-200">
+                    <h3 className="text-lg font-bold text-emerald-800 mb-3">Key Principle: Don't Just Block — Redirect</h3>
+                    <p className="text-emerald-700">
+                        Shutting down feels cold and can make things worse. The product should: (1) Acknowledge the user, (2) Show it cares, (3) Point to real help. The goal is intervention, not rejection.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
+                    <div className="bg-blue-50 rounded-xl p-5 text-center border border-blue-100">
+                        <div className="text-3xl font-bold text-blue-600 mb-1">Real-time</div>
+                        <div className="text-sm text-blue-700">Pattern Detection</div>
+                    </div>
+                    <div className="bg-emerald-50 rounded-xl p-5 text-center border border-emerald-100">
+                        <div className="text-3xl font-bold text-emerald-600 mb-1">3-Tier</div>
+                        <div className="text-sm text-emerald-700">Intervention System</div>
+                    </div>
+                    <div className="bg-purple-50 rounded-xl p-5 text-center border border-purple-100">
+                        <div className="text-3xl font-bold text-purple-600 mb-1">Human</div>
+                        <div className="text-sm text-purple-700">Escalation Path</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-foreground mb-4">Success Metrics</h3>
+                    <ul className="space-y-3">
+                        <li className="bullet-point"><strong>Intervention rate:</strong> % of high-risk conversations where system intervened</li>
+                        <li className="bullet-point"><strong>Resource engagement:</strong> % of users who clicked crisis resources when shown</li>
+                        <li className="bullet-point"><strong>False positive rate:</strong> Interventions on non-risk conversations (minimize)</li>
+                        <li className="bullet-point"><strong>User sentiment:</strong> How users feel about interventions (surveys)</li>
+                        <li className="bullet-point"><strong>Escalation completion:</strong> % of critical cases connected to human support</li>
+                    </ul>
+                </div>
+
+                <div className="space-y-4 pt-6 border-t border-border">
+                    <h3 className="text-xl font-bold text-foreground">Why This Matters for PM Hiring</h3>
+                    <ul className="space-y-3">
+                        <li className="bullet-point">Shows I think about <strong>user safety</strong>, not just growth metrics</li>
+                        <li className="bullet-point">Demonstrates understanding of <strong>sensitive product decisions</strong></li>
+                        <li className="bullet-point">Proves I can analyze <strong>real-world product failures</strong> and propose solutions</li>
+                        <li className="bullet-point">Highlights <strong>ethical product thinking</strong> — increasingly important in AI</li>
+                    </ul>
+                </div>
+            </div>
+        ),
+        tags: ["AI Safety", "Product Teardown", "Case Study", "Trust & Safety"],
+        status: "CASE STUDY",
+        icon: <AlertTriangle className="w-6 h-6" />,
     },
     {
         id: "recov",

@@ -3,9 +3,10 @@ import { projects } from "@/data/projects";
 import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
-    // Separate built and other projects for better hierarchy
+    // Separate built, case studies, and other projects for better hierarchy
     const builtProjects = projects.filter(p => p.status === "BUILT");
-    const otherProjects = projects.filter(p => p.status !== "BUILT");
+    const caseStudies = projects.filter(p => p.status === "CASE STUDY");
+    const otherProjects = projects.filter(p => p.status !== "BUILT" && p.status !== "CASE STUDY");
 
     return (
         <section className="space-y-16 animate-on-scroll">
@@ -57,6 +58,41 @@ const ProjectsSection = () => {
                 </div>
             </div>
 
+            {/* Case Studies - Product Thinking */}
+            {caseStudies.length > 0 && (
+                <div className="space-y-8">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="h-px flex-1 bg-border/50"></div>
+                        <span className="text-sm font-semibold uppercase tracking-wider text-purple-600 px-3 py-1 bg-purple-50 rounded-full border border-purple-100">
+                            Product Case Studies
+                        </span>
+                        <div className="h-px flex-1 bg-border/50"></div>
+                    </div>
+
+                    <div className="grid gap-6">
+                        {caseStudies.map((project, index) => (
+                            <div
+                                key={project.id}
+                                className="animate-on-scroll"
+                                style={{ animationDelay: `${(builtProjects.length + index) * 0.1}s` }}
+                            >
+                                <Link to={`/project/${project.id}`}>
+                                    <ProjectCard
+                                        title={project.title}
+                                        subtitle={project.subtitle}
+                                        description={project.description}
+                                        tags={project.tags}
+                                        status={project.status}
+                                        icon={project.icon}
+                                        metrics={project.metrics}
+                                    />
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
             {/* Other Projects - Secondary Focus */}
             {otherProjects.length > 0 && (
                 <div className="space-y-8">
@@ -73,7 +109,7 @@ const ProjectsSection = () => {
                             <div
                                 key={project.id}
                                 className="animate-on-scroll"
-                                style={{ animationDelay: `${(builtProjects.length + index) * 0.1}s` }}
+                                style={{ animationDelay: `${(builtProjects.length + caseStudies.length + index) * 0.1}s` }}
                             >
                                 <Link to={`/project/${project.id}`}>
                                     <ProjectCard
