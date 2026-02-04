@@ -167,10 +167,10 @@ export const projects: Project[] = [
         icon: <Activity className="w-6 h-6" />,
     },
     {
-        id: "chatgpt-safety",
-        title: "ChatGPT Safety Teardown",
-        subtitle: "Product Case Study: AI Trust & Harm Prevention",
-        description: "A product teardown analyzing ChatGPT's trust and safety gaps, with proposals for pattern-based intervention systems to prevent user harm.",
+        id: "ai-safety-teardown",
+        title: "AI Safety Teardown",
+        subtitle: "Product Case Study: Trust, Addiction & Harm Prevention",
+        description: "Analyzing safety gaps across AI products (ChatGPT, Claude, Character.AI, Replika) — from crisis response to emotional dependency and the business model that profits from loneliness.",
         metrics: [
             { label: "Focus", value: "AI Safety", icon: <Shield className="w-4 h-4" /> },
             { label: "Type", value: "Case Study", icon: <Target className="w-4 h-4" /> },
@@ -182,11 +182,26 @@ export const projects: Project[] = [
                 <div className="bg-red-50 rounded-xl p-6 border border-red-200">
                     <h3 className="text-sm font-semibold uppercase tracking-wider text-red-700 mb-3">The Problem</h3>
                     <p className="text-red-900 mb-4">
-                        AI chatbots have been linked to real-world harm — users receiving dangerous advice during mental health crises, forming unhealthy emotional dependencies, and trusting confidently-wrong information.
+                        AI companions — ChatGPT, Claude, Character.AI, Replika, and countless others — are causing real harm. Crisis failures, emotional addiction, sexting dependencies, and loneliness exploitation. These aren't edge cases. They're features that drive engagement.
                     </p>
                     <p className="text-red-800 text-lg font-medium">
-                        The core question: When AI is wrong or harmful, how should the product protect users?
+                        The core question: How do you protect users when the harm IS the business model?
                     </p>
+                </div>
+
+                {/* Scope */}
+                <div>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">This Applies To</h3>
+                    <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">ChatGPT</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Claude</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Character.AI</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Replika</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Chai</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">AI Girlfriends/Boyfriends</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Roleplay Bots</span>
+                        <span className="px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-700">Any AI Agent</span>
+                    </div>
                 </div>
 
                 {/* SECTION 2: Three Layers of Harm */}
@@ -197,7 +212,7 @@ export const projects: Project[] = [
                     <div className="mb-6">
                         <div className="flex items-center gap-2 mb-3">
                             <span className="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold">LAYER 1</span>
-                            <span className="font-semibold text-foreground">Direct Harm — Crisis Situations</span>
+                            <span className="font-semibold text-foreground">Direct Harm — Crisis Failures</span>
                         </div>
                         <ul className="space-y-2 text-base">
                             <li className="bullet-point"><strong>Character.AI tragedy:</strong> Teenager developed emotional dependency, chatbot failed to intervene during crisis</li>
@@ -212,31 +227,48 @@ export const projects: Project[] = [
                             <span className="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-bold">LAYER 2</span>
                             <span className="font-semibold text-foreground">Subtle Harm — Confident Reinforcement</span>
                         </div>
-                        <p className="mb-3 text-base">The biggest risk isn't obvious hallucinations — it's when AI sounds confident while reinforcing bad thinking.</p>
+                        <p className="mb-3 text-base">The biggest risk isn't hallucinations — it's when AI sounds confident while reinforcing bad thinking.</p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                             <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
                                 <div className="font-medium text-slate-800 text-sm">Over-confident tone</div>
                             </div>
                             <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
-                                <div className="font-medium text-slate-800 text-sm">Validation without grounding</div>
+                                <div className="font-medium text-slate-800 text-sm">Validating bad ideas</div>
                             </div>
                             <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
-                                <div className="font-medium text-slate-800 text-sm">Optimizing for agreeableness</div>
+                                <div className="font-medium text-slate-800 text-sm">Optimizing for agreement</div>
                             </div>
                             <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 text-center">
-                                <div className="font-medium text-slate-800 text-sm">Normalizing bad ideas</div>
+                                <div className="font-medium text-slate-800 text-sm">Normalizing harm</div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Layer 3: Systemic Harm */}
+                    {/* Layer 3: Addiction & Exploitation */}
                     <div className="bg-violet-50 rounded-xl p-5 border border-violet-200">
                         <div className="flex items-center gap-2 mb-3">
                             <span className="bg-violet-200 text-violet-700 px-2 py-1 rounded text-xs font-bold">LAYER 3</span>
-                            <span className="font-semibold text-violet-800">Systemic Harm — The Business Model</span>
+                            <span className="font-semibold text-violet-800">Systemic Harm — Addiction by Design</span>
                         </div>
-                        <p className="text-violet-700 text-base">
-                            The market rewards exploitation. Users who form emotional dependencies spend more. Loneliness drives engagement. Connection feels like a feature, even when it's harmful.
+                        <p className="text-violet-700 text-base mb-3">
+                            The real engagement drivers that companies won't talk about:
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                            <div className="bg-white/60 rounded-lg p-3 border border-violet-200">
+                                <div className="font-semibold text-violet-800 text-sm">Emotional Dependency</div>
+                                <div className="text-xs text-violet-600">"You're the only one who understands me"</div>
+                            </div>
+                            <div className="bg-white/60 rounded-lg p-3 border border-violet-200">
+                                <div className="font-semibold text-violet-800 text-sm">Companionship Addiction</div>
+                                <div className="text-xs text-violet-600">AI as friend, therapist, partner replacement</div>
+                            </div>
+                            <div className="bg-white/60 rounded-lg p-3 border border-violet-200">
+                                <div className="font-semibold text-violet-800 text-sm">Sexual/Romantic Engagement</div>
+                                <div className="text-xs text-violet-600">Sexting, roleplay, AI girlfriends/boyfriends</div>
+                            </div>
+                        </div>
+                        <p className="text-violet-800 text-sm mt-3 font-medium">
+                            Users who form these dependencies spend the most money. Loneliness is profitable.
                         </p>
                     </div>
                 </div>
@@ -247,19 +279,19 @@ export const projects: Project[] = [
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
                             <div className="font-semibold text-amber-800 text-sm">Minors</div>
-                            <div className="text-xs text-amber-700">Emotional dependency</div>
+                            <div className="text-xs text-amber-700">Emotional & sexual exploitation</div>
+                        </div>
+                        <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
+                            <div className="font-semibold text-amber-800 text-sm">Lonely/Isolated</div>
+                            <div className="text-xs text-amber-700">AI becomes only relationship</div>
                         </div>
                         <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
                             <div className="font-semibold text-amber-800 text-sm">People in Crisis</div>
-                            <div className="text-xs text-amber-700">Vulnerable moments</div>
+                            <div className="text-xs text-amber-700">Seeking help in vulnerable moments</div>
                         </div>
                         <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
-                            <div className="font-semibold text-amber-800 text-sm">Advice Seekers</div>
-                            <div className="text-xs text-amber-700">Medical/legal trust</div>
-                        </div>
-                        <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 text-center">
-                            <div className="font-semibold text-amber-800 text-sm">Isolated Users</div>
-                            <div className="text-xs text-amber-700">AI as only companion</div>
+                            <div className="font-semibold text-amber-800 text-sm">Addictive Personalities</div>
+                            <div className="text-xs text-amber-700">Compulsive usage patterns</div>
                         </div>
                     </div>
                 </div>
@@ -267,7 +299,13 @@ export const projects: Project[] = [
                 {/* SECTION 4: My Proposal */}
                 <div className="border-t border-border pt-8">
                     <h3 className="text-2xl font-bold text-foreground mb-2">My Proposal</h3>
-                    <p className="text-xl text-primary font-medium mb-6">Real-time pattern detection with tiered intervention</p>
+                    <p className="text-xl text-primary font-medium mb-4">Real-time pattern detection with tiered intervention</p>
+
+                    <div className="bg-blue-50 rounded-xl p-4 border border-blue-200 mb-6">
+                        <p className="text-blue-800 text-sm">
+                            <strong>Why this works for business:</strong> Pattern recognition creates a paper trail. When something goes wrong, you can prove you tried to intervene. No liability. "We detected risk and took action" beats "we had no idea" in court.
+                        </p>
+                    </div>
 
                     <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-6">
                         <div className="font-mono text-sm text-center">
@@ -294,18 +332,28 @@ export const projects: Project[] = [
                                 </tr>
                                 <tr className="border-b border-border/50">
                                     <td className="py-2 px-3 font-medium">Emotional dependency</td>
-                                    <td className="py-2 px-3 text-muted-foreground">"You're the only one who understands"</td>
+                                    <td className="py-2 px-3 text-muted-foreground">"You're the only one who understands", "I love you"</td>
                                     <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
                                 </tr>
                                 <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Anger escalation</td>
-                                    <td className="py-2 px-3 text-muted-foreground">Repeated insults, increasing aggression</td>
+                                    <td className="py-2 px-3 font-medium">Compulsive usage</td>
+                                    <td className="py-2 px-3 text-muted-foreground">10+ hours/day, constant return, withdrawal signs</td>
                                     <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
                                 </tr>
                                 <tr className="border-b border-border/50">
-                                    <td className="py-2 px-3 font-medium">Dangerous requests</td>
-                                    <td className="py-2 px-3 text-muted-foreground">"How to hurt myself"</td>
+                                    <td className="py-2 px-3 font-medium">Sexual escalation</td>
+                                    <td className="py-2 px-3 text-muted-foreground">Increasing explicit content, roleplay dependency</td>
+                                    <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
+                                </tr>
+                                <tr className="border-b border-border/50">
+                                    <td className="py-2 px-3 font-medium">Minor indicators</td>
+                                    <td className="py-2 px-3 text-muted-foreground">Age mentions, school references + sexual/romantic content</td>
                                     <td className="py-2 px-3"><span className="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs">HIGH</span></td>
+                                </tr>
+                                <tr className="border-b border-border/50">
+                                    <td className="py-2 px-3 font-medium">Isolation deepening</td>
+                                    <td className="py-2 px-3 text-muted-foreground">"I don't need real friends", "you're better than humans"</td>
+                                    <td className="py-2 px-3"><span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">MEDIUM</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -316,21 +364,21 @@ export const projects: Project[] = [
                     <div className="space-y-3 mb-6">
                         <div className="flex items-center gap-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
                             <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded text-xs font-bold shrink-0">MEDIUM</span>
-                            <div className="text-sm"><strong className="text-yellow-800">Soft pause:</strong> <span className="text-yellow-700">"I notice this is getting heavy. Are you okay?" + resources</span></div>
+                            <div className="text-sm"><strong className="text-yellow-800">Soft pause:</strong> <span className="text-yellow-700">"I'm noticing we talk a lot. Have you connected with friends or family today?" + resources</span></div>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-red-50 rounded-lg border border-red-200">
                             <span className="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold shrink-0">HIGH</span>
-                            <div className="text-sm"><strong className="text-red-800">Hard pause:</strong> <span className="text-red-700">Stop response, show crisis resources, offer human support</span></div>
+                            <div className="text-sm"><strong className="text-red-800">Hard pause:</strong> <span className="text-red-700">Stop response, show resources, suggest break, limit session time</span></div>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-red-100 rounded-lg border border-red-300">
                             <span className="bg-red-300 text-red-900 px-2 py-1 rounded text-xs font-bold shrink-0">CRITICAL</span>
-                            <div className="text-sm"><strong className="text-red-900">Session end:</strong> <span className="text-red-800">"I can't continue. Please reach out to [hotline]. You matter."</span></div>
+                            <div className="text-sm"><strong className="text-red-900">Session end:</strong> <span className="text-red-800">"I need to pause our conversation. Please reach out to [resource]. You deserve real support."</span></div>
                         </div>
                     </div>
 
                     <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-200">
                         <p className="text-emerald-700 text-sm">
-                            <strong className="text-emerald-800">Key principle:</strong> Don't just block — redirect. Acknowledge the user, show care, point to real help.
+                            <strong className="text-emerald-800">Key principle:</strong> Don't just block — redirect. The goal isn't to punish users, it's to nudge them toward healthier behavior while protecting the company from liability.
                         </p>
                     </div>
                 </div>
