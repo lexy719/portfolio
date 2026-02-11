@@ -56,7 +56,7 @@ const Navigation = () => {
                             </a>
                         ))}
                         <a
-                            href="mailto:email@example.com"
+                            href="mailto:manueljosigoncalves01@gmail.com"
                             className="ml-2 px-4 py-2 text-sm font-semibold text-background bg-foreground hover:bg-foreground/90 rounded-lg transition-all"
                         >
                             Hire Me
@@ -91,7 +91,7 @@ const Navigation = () => {
                             </a>
                         ))}
                         <a
-                            href="mailto:email@example.com"
+                            href="mailto:manueljosigoncalves01@gmail.com"
                             className="block px-4 py-3 text-sm font-semibold text-center text-background bg-foreground hover:bg-foreground/90 rounded-lg transition-colors mt-2"
                             onClick={() => setIsMenuOpen(false)}
                         >

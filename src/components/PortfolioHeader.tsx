@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Mail, Linkedin, Github, ArrowDown, Briefcase, TrendingUp, Users } from "lucide-react";
+import { MapPin, Mail, Github, ArrowDown, Briefcase, TrendingUp, Users } from "lucide-react";
 
 const PortfolioHeader = () => {
     return (
@@ -37,7 +37,7 @@ const PortfolioHeader = () => {
                     </div>
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/5 border border-primary/10">
                         <Briefcase className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-medium text-foreground">4 Products Shipped</span>
+                        <span className="text-sm font-medium text-foreground">3 Products Shipped</span>
                     </div>
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/5 border border-primary/10">
                         <Users className="w-4 h-4 text-primary" />
@@ -48,31 +48,21 @@ const PortfolioHeader = () => {
 
             {/* Contact Links */}
             <div className="flex flex-wrap justify-center gap-3 pt-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                <a
-                    href="#"
-                    className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-muted/80 hover:bg-muted backdrop-blur-sm transition-all text-sm font-medium text-muted-foreground hover:text-foreground border border-border/50 hover:border-primary/30"
+                <span
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-muted/80 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50"
                 >
                     <MapPin className="w-4 h-4" />
                     Portugal, EU
-                </a>
+                </span>
                 <a
-                    href="mailto:email@example.com"
+                    href="mailto:manueljosigoncalves01@gmail.com"
                     className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-muted/80 hover:bg-muted backdrop-blur-sm transition-all text-sm font-medium text-muted-foreground hover:text-foreground border border-border/50 hover:border-primary/30"
                 >
                     <Mail className="w-4 h-4" />
                     Contact Me
                 </a>
                 <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-muted/80 hover:bg-muted backdrop-blur-sm transition-all text-sm font-medium text-muted-foreground hover:text-foreground border border-border/50 hover:border-primary/30"
-                >
-                    <Linkedin className="w-4 h-4" />
-                    LinkedIn
-                </a>
-                <a
-                    href="#"
+                    href="https://github.com/lexy719"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-muted/80 hover:bg-muted backdrop-blur-sm transition-all text-sm font-medium text-muted-foreground hover:text-foreground border border-border/50 hover:border-primary/30"

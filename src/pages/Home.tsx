@@ -78,7 +78,7 @@ const Home = () => {
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 pt-4">
                             <a
-                                href="mailto:email@example.com"
+                                href="mailto:manueljosigoncalves01@gmail.com"
                                 className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background font-semibold rounded-full hover:bg-foreground/90 transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
                             >
                                 Get in Touch
@@ -87,12 +87,12 @@ const Home = () => {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://github.com/lexy719"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group inline-flex items-center gap-3 px-8 py-4 bg-transparent text-foreground font-semibold rounded-full border-2 border-foreground/20 hover:border-foreground/40 transition-all hover:scale-105 active:scale-95"
                             >
-                                LinkedIn Profile
+                                GitHub Profile
                             </a>
                         </div>
                     </div>

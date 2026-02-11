@@ -15,8 +15,21 @@ const ProjectPage = () => {
 
     if (!project) {
         return (
-            <div className="min-h-screen flex items-center justify-center text-muted-foreground">
-                Project not found.
+            <div className="min-h-screen flex items-center justify-center bg-background px-4">
+                <div className="text-center space-y-6 max-w-md">
+                    <div className="text-6xl font-bold text-foreground/10">?</div>
+                    <h1 className="text-2xl font-bold text-foreground">Project not found</h1>
+                    <p className="text-muted-foreground">
+                        This project doesn't exist or may have been removed.
+                    </p>
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-all"
+                    >
+                        <ArrowLeft className="w-4 h-4" />
+                        Back to Portfolio
+                    </Link>
+                </div>
             </div>
         );
     }
@@ -180,7 +193,7 @@ const ProjectPage = () => {
                                             Interactive Demo
                                         </h2>
                                         <p className="text-muted-foreground">
-                                            Explore the live application below. Try the AI assistant, view the fleet dashboard, and navigate through different sections.
+                                            Explore the live application below. Interact with the features and see the product in action.
                                         </p>
                                     </div>
                                     <button
@@ -291,7 +304,7 @@ const ProjectPage = () => {
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <a
-                                href="mailto:email@example.com"
+                                href="mailto:manueljosigoncalves01@gmail.com"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-all"
                             >
                                 Get in Touch
