@@ -182,7 +182,7 @@ export const projects: Project[] = [
         title: "Priority Debater",
         subtitle: "AI-Powered Idea Stress-Testing Tool",
         description: "AI debate tool with 4 perspective lenses (Investor, Customer, Competitor, Post-Mortem). Dr. Alex Chen stress-tests your ideas using PM frameworks, signature tests, and quick actions like steelman and summarize.",
-        demoUrl: "https://priority-debater.vercel.app/",
+        demoUrl: "https://priority-debater.vercel.app",
         githubUrl: "https://github.com/lexy719/priority-debater",
         demoTips: [
             { title: "Pick a Lens", description: "Choose Investor, Customer, Competitor, or Post-Mortem perspective." },
